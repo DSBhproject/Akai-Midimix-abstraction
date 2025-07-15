@@ -1,6 +1,9 @@
 # Akai-Midimix-abstraction
 GOP abstraction for the Akai Midimix controller for plug and play use on Pure Data.
 
+![Akai MIDImix GUI](gui.jpg)
+
+
 🎚️ Akai MIDImix Abstraction for Pure Data
 [akai.midimx] is a plug-and-play abstraction designed for the Akai MIDImix MIDI controller in Pure Data, with full compatibility for PlugData. Featuring a clean GOP layout, it integrates seamlessly into any patch for intuitive mixer-style control.
 
