@@ -36,6 +36,34 @@ README.md → documentation file
 
 Akai Editor template patch (recommended)
 
+🔄 Interaction with Parent Patch
+The [akai.midimx] abstraction is designed to be controlled and monitored from its parent patch, allowing full integration in larger modular setups.
+
+📤 Sending Data to Parent Patch
+The abstraction outputs values through its send outlet, which can be filtered using a [route <param_number>] object to retrieve the specific parameter value.
+
+Example:
+
+puredata
+[route 3]
+|
+[param_value]
+🔎 This lets you track control changes from the MIDImix in your main patch logic.
+
+📥 Receiving External Control
+You can also send control data into the abstraction using its receive inlet.
+
+Use messages like:
+
+[param_set <param_number> <param_value>(
+To remotely change a parameter value (e.g., simulate fader movement or automation).
+
+🧭 Parameter Labeling
+You can assign names to parameters from the parent patch using:
+
+[param_label <param_number> <param_name>( -> receive inlet
+📝 This is useful for dynamic UI elements or identification in performance contexts.
+
 📝 Notes
 🔢 It has only one creation argument: the MIDI port number, which must match the number selected in PD's MIDI Settings.
 
